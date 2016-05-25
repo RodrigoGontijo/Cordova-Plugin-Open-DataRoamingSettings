@@ -1,4 +1,4 @@
-Cordova-Plugin-Open-Settings
+Cordova-Plugin-Open-DataRoamingSettings
 ==============================
 
 Open Roaming Data Settings.  Cordova / PhoneGap plugin.
