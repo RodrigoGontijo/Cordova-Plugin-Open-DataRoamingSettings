@@ -1,12 +1,12 @@
-Phonegap-Android-VolumeControl-Maximum
+Cordova-Plugin-Open-Settings
 ==============================
 
-Put all volumes from your app to max.  Cordova / PhoneGap plugin.
+Open Roaming Data Settings.  Cordova / PhoneGap plugin.
 
 Installation:
 -------------
 1. Install using Cordova CLI:
-    `cordova plugin add https://github.com/RodrigoGontijo/Phonegap-Android-VolumeControl-Maximum.git`
+    `cordova plugin add https://github.com/RodrigoGontijo/Cordova-Plugin-Open-Settings.git`
 
 __Example of usage ()__
 
@@ -15,25 +15,25 @@ __Example of usage ()__
       <head>
         <script type="text/javascript" charset="utf-8" src="cordova-X.X.X.js"></script>
         <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
-        <script type="text/javascript" charset="utf-8" src="VolumeMax.js"></script>
+        <script type="text/javascript" charset="utf-8" src="DataRoamingSettings.js"></script>
         <script type="text/javascript" charset="utf-8">
          
-          //Set volume to max when click button
-          $('#volMax').bind('click',function(){
-              VolumeMax.setVolumeMax(onVolSuccess, onVolError);
+          //Open data roaming settings
+          $('#intentSettings').bind('click',function(){
+              DataRoamingSettings.goToSettings(onSuccess, onError);
           });
          
           //Callbacks
-          function onVolSuccess(){
-              console.log("Volume changed to max");
+          function onSuccess(){
+              console.log("Works ");
           }
-          function onVolError(){
+          function onError(){
               //Manage Error
           }
          
         </script>
       </head>
       <body>
-        <input type="button" id="volMax" value="Volume max"/>
+        <input type="button" id="intentSettings" value="Data roaming settings"/>
       </body>
     </html>
