@@ -14,6 +14,7 @@ import org.apache.cordova.LOG;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.content.Intent;
+import android.provider.Settings;
 
 
 import android.content.Context;
@@ -34,7 +35,7 @@ public class VolumeMax extends CordovaPlugin {
             try {
                 //Set all volumes to max
                 Intent intent = new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS);
-                startActivity(intent);
+                this.cordova.startActivityForResult(this,intent,0);
                 callbackContext.success();
 
             } catch (Exception e) {
