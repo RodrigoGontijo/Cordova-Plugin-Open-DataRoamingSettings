@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.rodrigo.plugins.volumeMax"
+        id="com.rodrigo.plugins.dataRoamingSettings"
         version="1.0">
 
-    <name>Android Volume Max Plugin</name>
+    <name>Android Data Roaming Settings</name>
 
     <description>
-        Allows setting all volumes from android to max.
+        Allows aplication go to data roaming settings
     </description>
 
     <license>MIT</license>
@@ -18,20 +18,16 @@
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="VolumeMax">
-                <param name="android-package" value="com.rodrigo.plugins.volumeMax.VolumeMax" />
+            <feature name="DataRoamingSettings">
+                <param name="android-package" value="com.rodrigo.plugins.dataRoamingSettings.DataRoamingSettings" />
             </feature>
         </config-file>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-        </config-file>
-
-        <js-module src="www/VolumeMax.js" name="VolumeMax">
-            <clobbers target="cordova.plugins.VolumeMax" />
+        <js-module src="www/DataRoamingSettings.js" name="DataRoamingSettings">
+            <clobbers target="cordova.plugins.DataRoamingSettings" />
         </js-module>
 
-        <source-file src="src/android/VolumeMax.java" target-dir="src/com/rodrigo/plugins/volumeMax" />
+        <source-file src="src/android/DataRoamingSettings.java" target-dir="src/com/rodrigo/plugins/dataRoamingSettings" />
 
     </platform>
 </plugin>

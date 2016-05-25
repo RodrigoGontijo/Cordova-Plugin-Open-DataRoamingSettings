@@ -1,5 +1,5 @@
 /*
- * Phonegap VolumeMax Plugin for Android
+ * Android Data Roaming Setting
  * Cordova 2.2.0
  * Email: rodrigo[dot]gontijo[at]hotmail[dot]com
  * Author: Rodrigo Augusto Gontijo
@@ -8,15 +8,15 @@
 
 var exec = require('cordova/exec');
 
-var VolumeMax = {
-  setVolumeMax: function(successCallback, failureCallback){
+var DataRoamingSettings = {
+  goToDataRoamingSettings: function(successCallback, failureCallback){
 		return exec(
 			successCallback,
 			failureCallback,
-			'VolumeMax',
-			'setVolumeMax',
+			'DataRoamingSettings',
+			'goToDataRoamingSettings',
 			[]);
 	}
 };
 
-module.exports = VolumeMax;
+module.exports = DataRoamingSettings;
