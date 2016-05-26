@@ -6,7 +6,7 @@
  * Date: 05/23/2016
  */
 
-package com.rodrigo.plugins.volumeMax;
+package com.rodrigo.plugins.dataRoamingSettings;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -20,7 +20,7 @@ import android.provider.Settings;
 import android.content.Context;
 import android.media.*;
 
-public class VolumeMax extends CordovaPlugin {
+public class DataRoamingSettings extends CordovaPlugin {
 
     public static final String SET = "goToDataRoamingSettings";
     private static final String TAG = "DataRoamingSettings";
