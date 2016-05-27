@@ -33,7 +33,7 @@ public class DataRoamingSettings extends CordovaPlugin {
         context = cordova.getActivity().getApplicationContext();
         if (SET.equals(action)) {
             try {
-                //Set all volumes to max
+                //Call intent to open settings
                 Intent intent = new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS);
                 this.cordova.startActivityForResult(this,intent,0);
                 callbackContext.success();
